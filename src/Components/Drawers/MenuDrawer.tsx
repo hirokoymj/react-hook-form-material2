@@ -8,6 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 import { MainLists } from "Components/Lists/NavigationList";
+import { Typography } from "@mui/material";
 
 const drawerWidth: number = 240;
 const Drawer = styled(MuiDrawer, {
@@ -51,6 +52,14 @@ export const MenuDrawer = ({ open, toggleDrawer }: IProps) => {
           paddingLeft: 1,
           paddingRight: 1,
         }}>
+        <Typography
+          variant="h5"
+          component="h1"
+          align="center"
+          color="secondary"
+          style={{ flexGrow: 1 }}>
+          Logo
+        </Typography>
         <IconButton onClick={toggleDrawer}>
           <ChevronLeftIcon />
         </IconButton>

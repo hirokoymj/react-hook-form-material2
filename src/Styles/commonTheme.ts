@@ -1,6 +1,14 @@
 import { createTheme } from "@mui/material/styles";
 
 export const commonTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#00008F",
+    },
+    secondary: {
+      main: "#00ADC6",
+    },
+  },
   typography: {
     fontFamily: [
       "Roboto",

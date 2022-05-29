@@ -36,7 +36,7 @@ export const FormInputRadio: React.FC<FormInputProps> = ({
         name={name}
         control={control}
         render={({ field: { onChange, value } }) => (
-          <RadioGroup value={value} onChange={onChange}>
+          <RadioGroup value={value} onChange={onChange} row>
             {options.map((option) => {
               return (
                 <FormControlLabel

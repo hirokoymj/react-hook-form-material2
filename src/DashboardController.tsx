@@ -8,6 +8,7 @@ import { MenuDrawer } from "Components/Drawers/MenuDrawer";
 import { Home } from "Containers/Home";
 import { About } from "Containers/About";
 import { Info } from "Containers/Info";
+import { FormView } from "Containers/FormView";
 
 export const DashboardController = () => {
   const [open, setOpen] = React.useState(true);
@@ -35,6 +36,7 @@ export const DashboardController = () => {
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="info" element={<Info />} />
+          <Route path="form" element={<FormView />} />
         </Routes>
       </Box>
     </Box>
