@@ -6,7 +6,7 @@ interface IProps {
 }
 export const PageLayout = ({ children }: IProps) => {
   return (
-    <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+    <Container maxWidth="lg" sx={{ marginTop: 4, marginButton: 4 }}>
       {children}
     </Container>
   );

@@ -7,6 +7,8 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
+import { MainLists } from "Components/Lists/NavigationList";
+
 const drawerWidth: number = 240;
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -46,7 +48,8 @@ export const MenuDrawer = ({ open, toggleDrawer }: IProps) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-end",
-          px: [1],
+          paddingLeft: 1,
+          paddingRight: 1,
         }}>
         <IconButton onClick={toggleDrawer}>
           <ChevronLeftIcon />
@@ -54,9 +57,8 @@ export const MenuDrawer = ({ open, toggleDrawer }: IProps) => {
       </Toolbar>
       <Divider />
       <List component="nav">
-        List-1
-        <Divider sx={{ my: 1 }} />
-        List-2
+        <MainLists />
+        <Divider sx={{ marginTop: 1, marginBottom: 1 }} />
       </List>
     </Drawer>
   );

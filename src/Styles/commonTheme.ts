@@ -3,6 +3,9 @@ import { createTheme } from "@mui/material/styles";
 export const commonTheme = createTheme({
   typography: {
     fontFamily: [
+      "Roboto",
+      "sans-serif",
+      "Titillium Web",
       "Noto Sans JP",
       "Lato",
       "游ゴシック Medium",
@@ -15,7 +18,6 @@ export const commonTheme = createTheme({
       "Meiryo",
       "ＭＳ Ｐゴシック",
       "MS PGothic",
-      "sans-serif",
     ].join(","),
   },
 });

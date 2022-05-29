@@ -1,10 +1,14 @@
+import { BrowserRouter } from "react-router-dom";
+
 import { DashboardController } from "DashboardController";
 import { ThemeProvider } from "Styles/ThemeProvider";
 
 const App = () => {
   return (
     <ThemeProvider>
-      <DashboardController />
+      <BrowserRouter>
+        <DashboardController />
+      </BrowserRouter>
     </ThemeProvider>
   );
 };
