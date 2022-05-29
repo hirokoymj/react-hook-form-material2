@@ -1,16 +1,27 @@
 import React, { useEffect } from "react";
-import { Button, Paper, Typography, Container } from "@material-ui/core";
+import { Button, Paper, Typography, Container } from "@mui/material";
+import { styled, makeStyles, Theme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+
 import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-import { FormInputText } from "./form-components/FormInputText";
-import { FormInputMultiCheckbox } from "./form-components/FormInputMultiCheckbox";
-import { FormInputDropdown } from "./form-components/FormInputDropdown";
+import { FormInputText } from "Components/forms/FormInputText";
+import { FormInputMultiCheckbox } from "Components/forms/FormInputMultiCheckbox";
+import { FormInputDropdown } from "Components/forms/FormInputDropdown";
 // import { FormInputDate } from "./form-components/FormInputDate";
-import { FormInputSlider } from "./form-components/FormInputSlider";
-import { FormInputRadio } from "./form-components/FormInputRadio";
-import { FormInputCheckbox } from "./form-components/FormInputCheckbox";
+import { FormInputSlider } from "Components/forms/FormInputSlider";
+import { FormInputRadio } from "Components/forms/FormInputRadio";
+import { FormInputCheckbox } from "Components/forms/FormInputCheckbox";
+
+const useStyles = makeStyles((theme: Theme) => ({
+  myButton: {
+    backgroundColor: theme.palette.secondary.dark,
+    color: "green",
+  },
+}));
 
 interface IFormInput {
   firstName: string;
@@ -84,7 +95,6 @@ export const FormDemo = () => {
     handleSubmit,
     reset,
     formState: { isSubmitSuccessful, isDirty },
-    setValue,
   } = methods;
   const onSubmit = (data: IFormInput) => console.log(data);
 
@@ -98,53 +108,53 @@ export const FormDemo = () => {
 
   return (
     <Container maxWidth="sm">
-      <Paper
+      {/* <Paper
         style={{
           display: "grid",
           gridRowGap: "20px",
           padding: "20px",
-        }}>
-        <Typography variant="h6"> Form Demo</Typography>
-        <FormProvider {...methods}>
-          <FormInputText name="firstName" label="First Name" />
-          <FormInputRadio
-            name={"gender"}
-            label={"Gender"}
-            options={radioOptions}
-          />
-          <FormInputDropdown
-            name="color"
-            label="Select color"
-            options={options}
-          />
-          <FormInputMultiCheckbox
-            name={"drinks"}
-            label={"Your favorite drinks"}
-            options={checkboxOptions}
-            defaultValues={defaultValues.drinks}
-          />
-          <FormInputCheckbox
-            name="acceptTerms"
-            label="Terms and Conditions"
-            formLabel="I read and accept."
-          />
-          {/* <FormInputDate name="dateValue" label="Date Input" /> */}
-          <FormInputSlider name={"sliderValue"} label={"Slider Input"} />
-        </FormProvider>
+        }}> */}
+      <Typography variant="h6"> Form Demo</Typography>
+      <FormProvider {...methods}>
+        <FormInputText name="firstName" label="First Name" />
+        <FormInputRadio
+          name={"gender"}
+          label={"Gender"}
+          options={radioOptions}
+        />
+        <FormInputDropdown
+          name="color"
+          label="Select color"
+          options={options}
+        />
+        <FormInputMultiCheckbox
+          name={"drinks"}
+          label={"Your favorite drinks"}
+          options={checkboxOptions}
+          defaultValues={defaultValues.drinks}
+        />
+        <FormInputCheckbox
+          name="acceptTerms"
+          label="Terms and Conditions"
+          formLabel="I read and accept."
+        />
+        {/* <FormInputDate name="dateValue" label="Date Input" /> */}
+        <FormInputSlider name={"sliderValue"} label={"Slider Input"} />
+      </FormProvider>
 
-        <Button onClick={handleSubmit(onSubmit)} variant={"contained"}>
-          {" "}
-          Submit{" "}
-        </Button>
-        <Button
-          onClick={() => {
-            reset({ ...defaultValues });
-          }}
-          variant={"outlined"}>
-          {" "}
-          Reset{" "}
-        </Button>
-      </Paper>
+      <Button onClick={handleSubmit(onSubmit)} variant={"contained"}>
+        {" "}
+        Submit{" "}
+      </Button>
+      <Button
+        onClick={() => {
+          reset({ ...defaultValues });
+        }}
+        variant={"outlined"}>
+        {" "}
+        Reset{" "}
+      </Button>
+      {/* </Paper> */}
     </Container>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FormLabel, Slider } from "@material-ui/core";
+import { FormLabel, Slider } from "@mui/material";
 import { Controller, useFormContext } from "react-hook-form";
 
 interface FormInputProps {
@@ -13,7 +13,7 @@ export const FormInputSlider = ({ name, label }: FormInputProps) => {
 
   useEffect(() => {
     if (sliderValue) setValue(name, sliderValue);
-  }, [sliderValue]);
+  }, [sliderValue, name, setValue]);
 
   const handleChange = (event: any, newValue: number | number[]) => {
     setSliderValue(newValue as number);

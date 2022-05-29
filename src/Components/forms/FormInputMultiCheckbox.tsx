@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Checkbox,
   FormControl,
@@ -6,7 +6,7 @@ import {
   FormLabel,
   FormGroup,
   FormHelperText,
-} from "@material-ui/core";
+} from "@mui/material";
 import { Controller, useFormContext } from "react-hook-form";
 
 interface option {
@@ -30,8 +30,7 @@ export const FormInputMultiCheckbox: React.FC<FormInputProps> = ({
   // const [selectedItems, setSelectedItems] = useState<any>([]);
   const {
     control,
-    formState: { errors, isSubmitSuccessful },
-    setValue,
+    formState: { errors },
     getValues,
   } = useFormContext();
 

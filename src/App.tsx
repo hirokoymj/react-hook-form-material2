@@ -1,11 +1,12 @@
-import React from "react";
-import { FormDemo } from "./FormDemo";
-function App() {
+import { DashboardController } from "DashboardController";
+import { ThemeProvider } from "Styles/ThemeProvider";
+
+const App = () => {
   return (
-    <div>
-      <FormDemo />
-    </div>
+    <ThemeProvider>
+      <DashboardController />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

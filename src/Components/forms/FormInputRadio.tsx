@@ -6,7 +6,7 @@ import {
   Radio,
   RadioGroup,
   FormHelperText,
-} from "@material-ui/core";
+} from "@mui/material";
 import { Controller, useFormContext } from "react-hook-form";
 
 interface option {

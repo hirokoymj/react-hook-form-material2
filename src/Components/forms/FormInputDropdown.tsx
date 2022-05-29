@@ -5,7 +5,7 @@ import {
   MenuItem,
   Select,
   FormHelperText,
-} from "@material-ui/core";
+} from "@mui/material";
 import { useFormContext, Controller } from "react-hook-form";
 
 interface option {
