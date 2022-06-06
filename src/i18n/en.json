@@ -1,0 +1,25 @@
+{
+  "header": {
+    "signin": "Signin",
+    "userList": "User List<br />This is a line break test.",
+    "mykey": "My text that can be <strong>{{selectLimit}}</strong>"
+  },
+  "form": {
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "gender": "Gender"
+    },
+    "errros": {
+      "required": "{{field}} is required field",
+      "requiredFirstName": "Please fill in your first name",
+      "requiredColor": "Please select a color",
+      "requiredGender": "Gender is a required field",
+      "requiredDrink": "Drinks is a required field",
+      "acceptTerms": "Terms and Conditions is a required field"
+    }
+  },
+  "nameTitle": "This is Hiroko",
+  "userMessagesUnread_one": "Hello <1>{{name}}</1>, you have {{count}} unread message. <5>Go to message</5>.",
+  "userMessagesUnread_other": "Hello <1>{{name}}</1>, you have {{count}} unread messages.  <5>Go to messages</5>."
+}

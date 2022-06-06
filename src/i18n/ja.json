@@ -1,0 +1,23 @@
+{
+  "header": {
+    "signin": "ログイン",
+    "userList": "ユーザリスト<br /><br /><br />改行テスト。ここで改行",
+    "mykey": "このテキストの制限は <strong>{{selectLimit}}</strong>"
+  },
+  "form": {
+    "fields": {
+      "firstName": "名前",
+      "lastName": "苗字",
+      "gender": "性別"
+    },
+    "errors": {
+      "required": "{{field}}を入力してください",
+      "firstName": "名前を入力してください",
+      "color": "色を選択してください",
+      "gender": "性別を選択してください",
+      "drinks": "飲み物を選択してください",
+      "drinksAtLeast": "飲み物を１つ以上選択してください",
+      "acceptTerms": "利用規約は必須項目です"
+    }
+  }
+}

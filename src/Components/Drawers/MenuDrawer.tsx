@@ -56,7 +56,7 @@ export const MenuDrawer = ({ open, toggleDrawer }: IProps) => {
           variant="h5"
           component="h1"
           align="center"
-          color="secondary"
+          color="primary"
           style={{ flexGrow: 1 }}>
           Logo
         </Typography>

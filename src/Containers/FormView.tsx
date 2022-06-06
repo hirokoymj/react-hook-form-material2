@@ -16,6 +16,7 @@ import { FormInputRadio } from "Components/forms/FormInputRadio";
 import { FormInputCheckbox } from "Components/forms/FormInputCheckbox";
 import { PageLayout } from "Components/Layouts/PageLayout";
 import { Title } from "Components/Layouts/Title";
+import { schema } from "Containers/validation";
 
 // const useStyles = makeStyles((theme: Theme) => ({
 //   myButton: {
@@ -43,18 +44,6 @@ const defaultValues = {
   sliderValue: 0,
   acceptTerms: false,
 };
-
-const schema = yup
-  .object({
-    firstName: yup.string().required("Please fill in first name"),
-    color: yup.string().required("Please select color"),
-    gender: yup.string().required("Please select gender"),
-    drinks: yup.array().min(1).of(yup.string().required("Drink is required")),
-    acceptTerms: yup
-      .boolean()
-      .oneOf([true], "Terms and Conditions is required"),
-  })
-  .required();
 
 const options = [
   {
