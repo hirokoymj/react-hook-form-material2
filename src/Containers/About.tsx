@@ -1,22 +1,13 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import makeStyles from "@mui/styles/makeStyles";
-import { Theme } from "@mui/material/styles";
-
-import { PageLayout } from "Components/Layouts/PageLayout";
+import Link from "@mui/material/Link";
 import { useTranslation, Trans } from "react-i18next";
 
-const useStyles = makeStyles((theme: Theme) => ({
-  myButton: {
-    backgroundColor: theme.palette.secondary.main,
-    color: theme.palette.common.white,
-  },
-}));
+import { PageLayout } from "Components/Layouts/PageLayout";
 
 export const About = () => {
-  const classes = useStyles();
   const { t } = useTranslation();
-  const name = "hiroko";
+  const name: string = "hiroko";
   const count = 20;
 
   console.log(
@@ -28,25 +19,33 @@ export const About = () => {
   return (
     <PageLayout>
       <h1>About</h1>
-      {t("greet", { ns: "moduleA" })}
+      <h3>Text</h3>
+      <p>{t("header.login")}</p>
+      <p>{t("greet", { ns: "glossary" })}</p>
       <hr />
-      {t("header.signin")}
+      <h3>Buttons</h3>
+      <Button variant="outlined">{t("buttons.submit")}</Button>
+      <Button variant="contained">{t("buttons.add")}</Button>
+      <Button variant="outlined">{t("buttons.edit")}</Button>
+      <Button variant="outlined">{t("buttons.cancel")}</Button>
       <hr />
-      {t("header.userList")}
+      <h3>Links</h3>
+      <p>
+        <Link href="#">{t("links.hasAccount")}</Link>
+      </p>
+      <p>
+        <Link href="#">{t("links.forgotPassword")}</Link>
+      </p>
       <hr />
-      {t("header.mykey", {
-        selectLimit: "this is hiroko text",
-      })}
-      <hr />
-      {t("form.errors.required", {
-        field: "First Name",
-      })}
+      <h3>Error message:</h3>
+      <p>{t("form.errors.firstName", { ns: "validation" })}</p>
+      <p>{t("form.errors.address1", { ns: "validation" })}</p>
+      <h3>Text with values:</h3>
 
-      {/* <Trans i18nKey="userMessagesUnread" count={count}>
-        Hello <strong title={t("nameTitle")}>{{ name }}</strong>, you have{" "}
+      <Trans i18nKey="userMessagesUnread" count={count}>
+        Hello <strong title={t("nameTitle")}>your name here</strong>, you have{" "}
         {{ count }} unread message.
-      </Trans> */}
-      <Button className={classes.myButton}>test</Button>
+      </Trans>
     </PageLayout>
   );
 };

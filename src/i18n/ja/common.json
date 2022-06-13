@@ -1,0 +1,44 @@
+{
+  "__comment__": " UI eg. Button labels 'save', 'cancel'",
+  "header": {
+    "login": "ログイン",
+    "companyName": "",
+    "search": "検索"
+  },
+  "footer": {
+    "copyright": "Copyright © www.example.com 2022."
+  },
+  "navigation": {
+    "home": "ホーム",
+    "about": "会社概要",
+    "contactUs": "お問い合わせ"
+  },
+  "buttons": {
+    "submit": "申請",
+    "add": "追加",
+    "edit": "編集",
+    "delete": "削除",
+    "cancel": "キャンセル",
+    "view": "表示",
+    "next": "次へ",
+    "back": "戻る",
+    "signup": "サインアップ"
+  },
+  "forms": {
+    "orderForm": {
+      "firstName": "名前",
+      "lastName": "苗字",
+      "address1": "住所1",
+      "address2": "住所2"
+    },
+    "sampleForm": {
+      "firstName": "First",
+      "lastName": "Last name"
+    }
+  },
+  "links": {
+    "hasAccount": "既にアカウントをお持ちの方は、サインインへ",
+    "forgotPassword": "パスワードをお忘れですか?"
+  },
+  "userMessagesUnread": "Hello <1>your name here</1>, you have {{count}} unread message. <5>Go to message</5>."
+}

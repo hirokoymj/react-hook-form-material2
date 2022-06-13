@@ -1,0 +1,5 @@
+{
+  "__comment__": "Words we want to be reused consistently inside texts",
+  "greet": "Hi there, it's John Smith here!",
+  "userMessagesUnread": "Hello <1>{{name}}</1>, you have {{count}} unread message. <5>Go to message</5>."
+}

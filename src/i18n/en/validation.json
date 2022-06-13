@@ -1,0 +1,31 @@
+{
+  "__comment__": "All validation texts",
+  "form": {
+    "errors": {
+      "firstName": "First name is required",
+      "lastName": "Last name is required",
+      "address1": "Address 1 is required",
+      "address2": "Address 2 is required",
+      "color": "Please select a color",
+      "gender": "Gender is a required field",
+      "drink": "Drinks is a required field",
+      "acceptTerms": "Terms and Conditions is a required field"
+    }
+  },
+  "api": {
+    "errors": {
+      "getUser": "Failed to get user data. Please contact System Administrator",
+      "addUser": "Failed to add user data.",
+      "editUser": "Failed to edit user data.",
+      "deleteUser": "Failed to delete user data."
+    },
+    "success": {
+      "addUser": "User data has been added",
+      "editUser": "User data has been updated",
+      "deleteUser": "User data has been deleted."
+    },
+    "loading": {
+      "text": "Loading..."
+    }
+  }
+}

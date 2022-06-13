@@ -1,3 +1,44 @@
 {
-  "greet": "Hi there, it's Ruben here!"
+  "__comment__": " UI eg. Button labels 'save', 'cancel'",
+  "header": {
+    "login": "Login",
+    "companyName": "",
+    "search": "Search"
+  },
+  "footer": {
+    "copyright": "Copyright © www.example.com 2022."
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contactUs": "Contact us"
+  },
+  "buttons": {
+    "submit": "Submit",
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "view": "View",
+    "next": "Next",
+    "back": "Back",
+    "signup": "Sign Up"
+  },
+  "forms": {
+    "orderForm": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "address1": "Address 1",
+      "address2": "Address 2"
+    },
+    "sampleForm": {
+      "firstName": "First name",
+      "lastName": "Last name"
+    }
+  },
+  "links": {
+    "hasAccount": "Already have an account? Sign in",
+    "forgotPassword": "Forgot password?"
+  },
+  "userMessagesUnread": "Hello <1>{{name}}</1>, you have {{count}} unread message. <5>Go to message</5>."
 }
